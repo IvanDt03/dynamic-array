@@ -126,7 +126,31 @@ namespace Arrays
                     arr[i] = default(T);
                 return arr;
             }
-        } 
+        }
+        public int RemoveAll(T val)
+        {
+            int k = this.Size;
+
+            for (int i = 0; i < k; ++i)
+            {
+                bool flag = false;
+                if (val.Equals(_array[i]))
+                {
+                    Swap(ref _array[i], ref _array[k - 1]);
+                    --k;
+                    flag = true;
+                }
+                if (flag) --i;
+            }
+            return k;
+
+            static void Swap(ref T a, ref T b)
+            {
+                T tmp = a;
+                a = b;
+                b = tmp;
+            }
+        }
         public void Sort(IComparer comparer)
         {
             if (_array == null) throw new NullReferenceException("It is not possible to reference a null array");
