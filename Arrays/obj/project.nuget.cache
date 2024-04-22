@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NAhYZK9nxab5VlkjQWCFGqDaKvj2pZertWNnNRZ8y0tHYUY0cyBOS7spQgIy6djWps9McMKUrU+JZdvT80j4nw==",
+  "dgSpecHash": "51S6H0UHZzJqgqtOtDFK5U1WEmFrYCMBKGFELTsS7Wc9sC/rDTAcwyMm7AsxZfnLG0wJW3jFs7chdumSGELekw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vanya\\Desktop\\Программы C#\\Arrays\\Arrays\\Arrays.csproj",
+  "projectFilePath": "C:\\Users\\vanya\\Desktop\\Программы C#\\dynamic-array\\Arrays\\Arrays.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

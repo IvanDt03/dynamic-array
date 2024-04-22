@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vanya\\Desktop\\Программы C#\\Arrays\\Arrays\\Arrays.csproj": {}
+    "C:\\Users\\vanya\\Desktop\\Программы C#\\dynamic-array\\Arrays\\Arrays.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vanya\\Desktop\\Программы C#\\Arrays\\Arrays\\Arrays.csproj": {
+    "C:\\Users\\vanya\\Desktop\\Программы C#\\dynamic-array\\Arrays\\Arrays.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vanya\\Desktop\\Программы C#\\Arrays\\Arrays\\Arrays.csproj",
+        "projectUniqueName": "C:\\Users\\vanya\\Desktop\\Программы C#\\dynamic-array\\Arrays\\Arrays.csproj",
         "projectName": "Arrays",
-        "projectPath": "C:\\Users\\vanya\\Desktop\\Программы C#\\Arrays\\Arrays\\Arrays.csproj",
+        "projectPath": "C:\\Users\\vanya\\Desktop\\Программы C#\\dynamic-array\\Arrays\\Arrays.csproj",
         "packagesPath": "C:\\Users\\vanya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vanya\\Desktop\\Программы C#\\Arrays\\Arrays\\obj\\",
+        "outputPath": "C:\\Users\\vanya\\Desktop\\Программы C#\\dynamic-array\\Arrays\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

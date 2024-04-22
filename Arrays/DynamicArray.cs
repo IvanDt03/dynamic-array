@@ -3,9 +3,9 @@ using System.Text;
 
 namespace Arrays
 {
-    public class DynamicArray : ICloneable
+    public class DynamicArray<T> : ICloneable
     {
-        private int[]? _array;
+        private T[]? _array;
         public int Size { get; private set; }
 
         public DynamicArray(object? array)
@@ -17,7 +17,7 @@ namespace Arrays
             }
             if (array is int[] arr)
             {
-                _array = (int[])arr.Clone();
+                _array = (T[])arr.Clone();
                 Size = arr.Length;
             }
             else
@@ -29,7 +29,7 @@ namespace Arrays
         public DynamicArray(int size)
         {
             Size = size;
-            _array = new int[Size];
+            _array = new T[Size];
         }
 
 
@@ -53,29 +53,29 @@ namespace Arrays
                 }
             }
         }
-        public int GetValue(int index)
+        public T GetValue(int index)
         {
             if (_array == null) throw new NullReferenceException("It is not possible to reference a null array");
             if (index < 0 || index >= Size) throw new ArgumentOutOfRangeException("Index invalid");
             return _array[index];
         }
-        public void SetValue(int index, int value) { 
+        public void SetValue(int index, T value) { 
             if (index < 0 || index >= Size) throw new ArgumentOutOfRangeException("index");
             if (_array == null) throw new NullReferenceException("It is not possible to reference a null array");
             _array[index] = value;
         }
-        public void InsertValue(int index, int value)
+        public void InsertValue(int index, T value)
         {
             if (index < 0 || index > Size) throw new ArgumentOutOfRangeException("index");
             ++Size;
             if (_array == null)
             {
-                _array = new int[Size];
+                _array = new T[Size];
                 _array[0] = value;
             }
             else
             {
-                int[] tmpArr = new int[Size];
+                T[] tmpArr = new T[Size];
                 for (int i = 0, j = 0; i < Size; ++i)
                 {
                     if (i == index)
@@ -90,7 +90,7 @@ namespace Arrays
                 _array = tmpArr;
             }
         }
-        public void Push(int value)
+        public void Push(T value)
         {
             this.InsertValue(Size - 1, value);
         }
@@ -99,31 +99,31 @@ namespace Arrays
             if (newSize < 0) throw new ArgumentException("Size cannot be less than zero");
             if (_array == null)
             {
-                _array = new int[newSize];
+                _array = new T[newSize];
             } 
             if (Size == newSize) return;
             else if (Size > newSize)
             {
-                int[] tmpArr = new int[newSize];
+                T[] tmpArr = new T[newSize];
                 for (int i = 0; i < newSize; ++i)
                     tmpArr[i] = _array[i];
                 _array = tmpArr;
             }
             else if (Size < newSize)
             {
-                int[] tmpArr = new int[newSize];
+                T[] tmpArr = new T[newSize];
                 for (int i = 0; i < Size; ++i)
                     tmpArr[i] = _array[i];
                 for (int i = Size; i < newSize; ++i)
-                    tmpArr[i] = default(int);
+                    tmpArr[i] = default(T);
                 _array = FillDefault(tmpArr, Size, newSize);
 
             }
             Size = newSize;
-            static int[] FillDefault(int[] arr, int start, int count)
+            static T[] FillDefault(T[] arr, int start, int count)
             {
                 for (int i = start; i < count; ++i)
-                    arr[i] = default(int);
+                    arr[i] = default(T);
                 return arr;
             }
         } 
@@ -142,7 +142,7 @@ namespace Arrays
         public override bool Equals(object? obj)
         {
             if (obj == null) throw new ArgumentNullException($"It is not possible to reference a null {nameof(obj)}");
-            if (obj is DynamicArray arr)
+            if (obj is DynamicArray<T> arr)
                 return this.ToString() == arr.ToString() ? true : false;
             throw new ArgumentException($"Unable to convert {nameof(obj)} to DynamicArray");
         }
@@ -150,7 +150,5 @@ namespace Arrays
         {
             return this.ToString().GetHashCode();
         }
-
-        
     }
 }
