@@ -33,7 +33,14 @@ namespace Arrays
         }
 
 
-        public object Clone() => this.MemberwiseClone();
+        public object Clone()
+        {
+            T[] tmpArr = new T[Size];
+            for (int i = 0; i <  Size; i++) {
+                tmpArr[i] = _array[i];
+            }
+            return tmpArr;
+        }
         public IEnumerable GetArray(bool returnReversed = false)
         {
             if (_array == null) throw new NullReferenceException("It is not possible to reference a null array");
@@ -127,23 +134,35 @@ namespace Arrays
                 return arr;
             }
         }
-        public int RemoveAll(T val)
+        public bool Contains(T val)
         {
-            int k = this.Size;
+            if (_array == null) return false;
+            T[] tmpArr = (T[])_array.Clone();
 
+            Array.Sort(tmpArr);
+            return Array.BinarySearch(tmpArr, val) > -1 ? true : false;
+        }
+        public bool RemoveAll(T val)
+        {
+            if (_array == null) return false;
+            if (!this.Contains(val)) return false;
+
+            int k = this.Size;
+            T[] tmpArr = (T[])_array.Clone();
             for (int i = 0; i < k; ++i)
             {
                 bool flag = false;
-                if (val.Equals(_array[i]))
+                if (val.Equals(tmpArr[i]))
                 {
-                    Swap(ref _array[i], ref _array[k - 1]);
+                    Swap(ref tmpArr[i], ref tmpArr[k - 1]);
                     --k;
                     flag = true;
                 }
                 if (flag) --i;
             }
-            return k;
-
+            _array = new T[k];
+            Array.Copy(tmpArr, _array, k);
+            return true;
             static void Swap(ref T a, ref T b)
             {
                 T tmp = a;

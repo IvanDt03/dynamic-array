@@ -9,3 +9,15 @@ C:\Users\vanya\Desktop\Программы C#\Arrays\Arrays\obj\Debug\net8.0\Arra
 C:\Users\vanya\Desktop\Программы C#\Arrays\Arrays\obj\Debug\net8.0\refint\Arrays.dll
 C:\Users\vanya\Desktop\Программы C#\Arrays\Arrays\obj\Debug\net8.0\Arrays.pdb
 C:\Users\vanya\Desktop\Программы C#\Arrays\Arrays\obj\Debug\net8.0\ref\Arrays.dll
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\bin\Debug\net8.0\Arrays.deps.json
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\bin\Debug\net8.0\Arrays.dll
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\bin\Debug\net8.0\Arrays.pdb
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\obj\Debug\net8.0\Arrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfoInputs.cache
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfo.cs
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\obj\Debug\net8.0\Arrays.csproj.CoreCompileInputs.cache
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\obj\Debug\net8.0\Arrays.sourcelink.json
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\obj\Debug\net8.0\Arrays.dll
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\obj\Debug\net8.0\refint\Arrays.dll
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\obj\Debug\net8.0\Arrays.pdb
+C:\Users\vanya\Desktop\Программы C#\dynamic-array\Arrays\obj\Debug\net8.0\ref\Arrays.dll
